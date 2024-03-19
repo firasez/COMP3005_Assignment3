@@ -37,12 +37,7 @@ public class StudentDatabase {
     public void createTable() {
         try {
             Statement statement = connection.createStatement();
-            statement.executeUpdate("CREATE TABLE IF NOT EXISTS students (" +
-                    "student_id SERIAL PRIMARY KEY," +
-                    "first_name TEXT NOT NULL," +
-                    "last_name TEXT NOT NULL," +
-                    "email TEXT NOT NULL UNIQUE," +
-                    "enrollment_date DATE)");
+            statement.executeUpdate("CREATE TABLE IF NOT EXISTS students (" + "student_id SERIAL PRIMARY KEY," + "first_name TEXT NOT NULL," + "last_name TEXT NOT NULL," + "email TEXT NOT NULL UNIQUE," + "enrollment_date DATE)");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -67,11 +62,7 @@ public class StudentDatabase {
 
             //Loop through all the columns while printing them
             while (resultSet.next()) {
-                System.out.println("Student ID: " + resultSet.getInt("student_id") +
-                        ", First Name: " + resultSet.getString("first_name") +
-                        ", Last Name: " + resultSet.getString("last_name") +
-                        ", Email: " + resultSet.getString("email") +
-                        ", Enrollment Date: " + resultSet.getDate("enrollment_date"));
+                System.out.println("Student ID: " + resultSet.getInt("student_id") + ", First Name: " + resultSet.getString("first_name") + ", Last Name: " + resultSet.getString("last_name") + ", Email: " + resultSet.getString("email") + ", Enrollment Date: " + resultSet.getDate("enrollment_date"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
