@@ -9,8 +9,8 @@
 The StudentDataBase program manipulates and manages a population of students in a DataBase using CRUD methods (Create, Read Update Delete. It allows for viewing all students in the database, adding a new student, updating a student's email and removing a specific student from the database. 
 
 ## YouTube Preview
-
-Watch the demo on YouTube [here](link_to_youtube_preview).
+Copy paste the link into your browser if link doesnt work.
+https://youtu.be/qjRD00LibSs
 
 ## Requirements before running
 
